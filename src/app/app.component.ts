@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { CadastroMedicamentosComponent } from './cadastro-medicamentos/cadastro-medicamentos.component';
+import { ConsultaMedicamentosComponent } from './consulta-medicamentos/consulta-medicamentos.component';
+import { NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { CadastroUsuariosComponent } from "./cadastro-usuarios/cadastro-usuarios.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CadastroMedicamentosComponent, ConsultaMedicamentosComponent, NgIf, RouterOutlet, NgFor, CadastroUsuariosComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'farmacia-app';
+  view: string = 'cadastro';
 }

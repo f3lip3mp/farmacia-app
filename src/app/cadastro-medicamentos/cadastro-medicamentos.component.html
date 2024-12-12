@@ -1,0 +1,13 @@
+<h2>Cadastro de Medicamentos</h2>
+<form (ngSubmit)="onSubmit(medicamentoForm)" #medicamentoForm="ngForm">
+  <label for="nome">Nome do Medicamento:</label>
+  <input id="nome" name="nome" ngModel required />
+
+  <label for="descricao">Descrição:</label>
+  <input id="descricao" name="descricao" ngModel required />
+
+  <label for="dosagem">Dosagem:</label>
+  <input id="dosagem" name="dosagem" ngModel required />
+
+  <button type="submit" [disabled]="!medicamentoForm.valid">Cadastrar</button>
+</form>

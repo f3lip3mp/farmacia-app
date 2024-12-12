@@ -1,0 +1,6 @@
+<h2>Consulta de Medicamentos</h2>
+<ul>
+  <li *ngFor="let medicamento of medicamentos">
+    <strong>{{ medicamento.nome }}</strong>: {{ medicamento.descricao }} ({{ medicamento.dosagem }})
+  </li>
+</ul>
